@@ -131,7 +131,7 @@ fore_df = df[df['Data_Type'] == '10-Year ML Forecast']
 fig.add_trace(go.Scatter(
     x=pd.concat([fore_df['Date'], fore_df['Date'][::-1]]),
     y=pd.concat([fore_df['Upper_Confidence_Limit'], fore_df['Lower_Confidence_Limit'][::-1]]),
-    fill='組合',
+    fill='toself',
     fillcolor='rgba(200, 200, 200, 0.25)' if scenario == "Business as Usual (Unmitigated Extraction)" else 'rgba(144, 238, 144, 0.2)',
     line=dict(color='rgba(255,255,255,0)'),
     hoverinfo="skip",
